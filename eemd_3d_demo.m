@@ -24,5 +24,10 @@ for m = (goal+1):-1:1
     imagesc( sum(R(:,:,:,m), 3) );
     axis image;
     colorbar;
+    if m == (goal+1)
+        title('xy proj. of trend');
+    else
+        title(['xy proj. of mode #' int2str(m)]);
+    end
 end
 
