@@ -6,8 +6,8 @@ close all;
 
 nos_img = 0.1;
 goal = 3;
-ens = 10;
-nos_wn = 0.01;
+ens = 100;
+nos_wn = 0.1;
 
 %% load data
 
