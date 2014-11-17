@@ -1,7 +1,6 @@
 // emd_core.cpp : 定義 DLL 應用程式的匯出函式。
 //
 
-#include "stdafx.h"
 #include <math.h>
 #include <mex.h>
 #include <matrix.h>
@@ -71,6 +70,14 @@ void emd_core(double *modes,
 		modes[goal1*i + goal] = r[i];
 	} // end of for-i
 
-	delete[] pmax, vmax, pmin, vmin, upper, lower, emean, h, r;
+	delete[] pmax;
+	delete[] vmax;
+	delete[] pmin;
+	delete[] vmin;
+	delete[] upper;
+	delete[] lower;
+	delete[] emean;
+	delete[] h;
+	delete[] r;
 }
 	

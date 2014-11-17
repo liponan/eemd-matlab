@@ -58,6 +58,13 @@ Running this file will decompose a 54x54x54 volume of a Mimivirus.
 Please be carful as running this demo will cost up to 20 GB memory.
 
 
+# MEX compilaion
+
+```
+mex -IC:/path/to/boost_1_55_0 cpp/eemd.cpp
+```
+
+Replace `C:/path/to/boost_1_55_0` with path to Boost on your computer.
 
 # Routine functions
 

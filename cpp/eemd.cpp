@@ -1,7 +1,6 @@
 // eemd.cpp : 定義 DLL 應用程式的匯出函式。
 //
 
-#include "stdafx.h"
 #include <math.h>
 #include <mex.h>
 #include <matrix.h>
@@ -107,7 +106,12 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[]) {
 			modes[i] = tmp[i]*sigma  / ens;
 	} // end of if-else
 
-	delete[] Y1, Y2, m1, m2, tmp, wn;
+	delete[] Y1;
+	delete[] Y2;
+	delete[] m1;
+	delete[] m2;
+	delete[] tmp;
+	delete[] wn;
 
 	}
 	
