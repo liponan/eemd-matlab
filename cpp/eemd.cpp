@@ -39,8 +39,6 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[]) {
 	double *Ens, *Goal, *Nstd;
 	int my, ny;
 	int m, i, c, k;
-	const int MAX = 501;
-	const int GMX = 10;
 
 	/* parse input arguments */
 	Y  = mxGetPr(prhs[0]);
