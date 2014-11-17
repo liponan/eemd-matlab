@@ -6,8 +6,8 @@
 load mimivirus_B;
 img = B;
 
-goal = 2;
-ens = 20;
+goal = 1;
+ens = 100;
 nos_wn = 1;
 
 %% run eemd3
@@ -18,6 +18,7 @@ R = eemd3(img, goal, ens, nos_wn);
 %% show modes
 
 close all;
+load dkbluered;
 
 for m = (goal+1):-1:1
     figure(m),
@@ -26,8 +27,11 @@ for m = (goal+1):-1:1
     colorbar;
     if m == (goal+1)
         title('xy proj. of trend');
+        colormap(jet);
     else
         title(['xy proj. of mode #' int2str(m)]);
+        colorbap(dkbluered);
+        caxis([-max(max(abs(sum(R(:,:,:,m), 3)))) max(max(abs(sum(R(:,:,:,m), 3))))]);
     end
 end
 
