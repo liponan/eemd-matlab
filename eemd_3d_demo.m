@@ -30,7 +30,7 @@ for m = (goal+1):-1:1
         colormap(jet);
     else
         title(['xy proj. of mode #' int2str(m)]);
-        colorbap(dkbluered);
+        colormap(dkbluered);
         caxis([-max(max(abs(sum(R(:,:,:,m), 3)))) max(max(abs(sum(R(:,:,:,m), 3))))]);
     end
 end
